@@ -1,0 +1,278 @@
+type: picture-elements
+elements:
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.rivian_body_closures_frunk_state
+        state: 'opened'
+    elements:
+      - type: image
+        entity: binary_sensor.rivian_body_closures_frunk_state
+        image: /local/img/r1t-top.png
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+      - type: image
+        entity: binary_sensor.rivian_body_closures_frunk_state
+        image: /local/img/r1t-trunk.svg
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.rivian_body_closures_door_fl_state
+        state: 'opened'
+    elements:
+      - type: image
+        image: /local/img/r1t-left.png
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+      - type: image
+        image: /local/img/r1t-driver-door.svg
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.rivian_body_closures_door_fr_state
+        state: 'opened'
+    elements:
+      - type: image
+        image: /local/img/r1t-right.png
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+      - type: image
+        entity: binary_sensor.rivian_body_closures_door_fr_state
+        image: /local/img/r1t-passenger-door.svg
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.rivian_body_closures_door_rl_state
+        state: 'opened'
+    elements:
+      - type: image
+        image: /local/img/r1t-left.png
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+      - type: image
+        entity: binary_sensor.rivian_body_closures_door_rl_state
+        image: /local/img/r1t-rear-left-door.svg
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.rivian_body_closures_door_rr_state
+        state: 'opened'
+    elements:
+      - type: image
+        image: /local/img/r1t-right.png
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+      - type: image
+        entity: binary_sensor.rivian_body_closures_door_rr_state
+        image: /local/img/r1t-rear-right-door.svg
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.rivian_body_closures_sidebin_l_state
+        state: 'opened'
+    elements:
+      - type: image
+        image: /local/img/r1t-left.png
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+      - type: image
+        entity: binary_sensor.rivian_body_closures_sidebin_l_state
+        image: /local/img/r1t-tunnel.svg   # TODO split graphics for tunnel-l and tunnel-r
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.rivian_body_closures_sidebin_r_state
+        state: 'opened'
+    elements:
+      - type: image
+        image: /local/img/r1t-right.png
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+      - type: image
+        entity: binary_sensor.rivian_body_closures_sidebin_r_state
+        image: /local/img/r1t-tunnel.svg   # TODO split graphics for tunnel-l and tunnel-r
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.rivian_body_closures_tonneau_state
+        state: 'opened'
+    elements:
+      - type: image
+        image: /local/img/r1t-bottom.png
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+      - type: image
+        entity: binary_sensor.rivian_body_closures_tonneau_state
+        image: /local/img/r1t-bed.svg
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.rivian_body_closures_tailgate_state
+        state: 'opened'
+    elements:
+      - type: image
+        image: /local/img/r1t-bottom.png
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+      - type: image
+        entity: binary_sensor.rivian_body_closures_tailgate_state
+        image: /local/img/r1t-tailgate.svg
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+  - type: conditional
+    conditions:
+      - entity: lock.rivian_lock
+        state: unlocked
+      - entity: binary_sensor.rivian_body_closures_door_fl_state
+        state: 'opened'
+      - entity: binary_sensor.rivian_body_closures_door_fr_state
+        state: 'opened'
+      - entity: binary_sensor.rivian_body_closures_door_rl_state
+        state: 'opened'
+      - entity: binary_sensor.rivian_body_closures_door_rr_state
+        state: 'opened'
+      - entity: binary_sensor.rivian_body_closures_frunk_state
+        state: 'opened'
+      - entity: binary_sensor.rivian_body_closures_tonneau_state
+        state: 'opened'
+      - entity: binary_sensor.rivian_body_closures_tailgate_state
+        state: 'opened'
+    elements:
+      - type: image
+        image: /local/img/r1t-all.png
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+      - type: image
+        image: /local/img/r1t-lock.svg
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+  - type: state-icon
+    entity: lock.rivian_lock
+    state_color: false
+    style:
+      top: 18%
+      left: 25%
+  - type: state-label
+    entity: lock.rivian_lock
+    style:
+      top: 23.5%
+      left: 25%
+  - type: state-icon
+    entity: device_tracker.rivian_telematics_gnss_position
+    state_color: false
+    style:
+      top: 18%
+      left: 77%
+  - type: state-label
+    entity: device_tracker.rivian_telematics_gnss_position
+    style:
+      top: 23.5%
+      left: 77%
+  - type: state-icon
+    entity: sensor.rivian_dynamics_odometer_value
+    style:
+      top: 75%
+      left: 77%
+  - type: state-label
+    entity: sensor.rivian_dynamics_odometer_value
+    style:
+      top: 81%
+      left: 77%
+  - type: state-icon
+    entity: sensor.rivian_energy_storage_charger_adjusted_soc
+    style:
+      top: 75%
+      left: 25%
+  - type: state-label
+    entity: sensor.rivian_energy_storage_charger_adjusted_soc
+    style:
+      top: 81%
+      left: 25%
+image: /local/img/r1t_lg.svg
