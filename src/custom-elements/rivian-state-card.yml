@@ -1,4 +1,6 @@
 type: picture-elements
+image: https://github.com/tmack8001/ha-rivian-card/blob/main/src/images/r1t/r1t-launch-green.png?raw=true
+
 elements:
   - type: conditional
     conditions:
@@ -156,6 +158,94 @@ elements:
         tap_action: none
   - type: conditional
     conditions:
+      - entity: binary_sensor.rivian_body_closures_front_left_window_state
+        state: 'opened'
+    elements:
+      - type: image
+        image: /local/img/r1t-left.png
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+      - type: image
+        entity: binary_sensor.rivian_body_closures_front_left_window_state
+        image: /local/img/r1t-driver-window.svg
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.rivian_body_closures_front_right_window_state
+        state: 'opened'
+    elements:
+      - type: image
+        image: /local/img/r1t-right.png
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+      - type: image
+        entity: binary_sensor.rivian_body_closures_front_right_window_state
+        image: /local/img/r1t-passenger-window.svg
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.rivian_body_closures_rear_left_window_state
+        state: 'opened'
+    elements:
+      - type: image
+        image: /local/img/r1t-left.png
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+      - type: image
+        entity: binary_sensor.rivian_body_closures_rear_left_window_state
+        image: /local/img/r1t-rear-left-window.svg
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.rivian_body_closures_rear_right_window_state
+        state: 'opened'
+    elements:
+      - type: image
+        image: /local/img/r1t-right.png
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+      - type: image
+        entity: binary_sensor.rivian_body_closures_rear_right_window_state
+        image: /local/img/r1t-rear-right-window.svg
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+  - type: conditional
+    conditions:
       - entity: binary_sensor.rivian_body_closures_tonneau_state
         state: 'opened'
     elements:
@@ -275,4 +365,3 @@ elements:
     style:
       top: 81%
       left: 25%
-image: /local/img/r1t_lg.svg
