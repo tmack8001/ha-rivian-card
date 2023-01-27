@@ -1,6 +1,7 @@
 type: picture-elements
 image: >-
   https://github.com/tmack8001/ha-rivian-card/blob/main/src/images/r1t/r1t-launch-green.png?raw=true
+  
 elements:
   - type: conditional
     conditions:
