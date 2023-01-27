@@ -35,9 +35,10 @@ All features of this card are visual alerts in nature. The following list will g
     - Base Model Colors Supported and have the following image file name schema `https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-<color-name>.png`
         - [rt1-launch-green.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-launch-green.png)
         - [rt1-rivian-blue.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-rivian-blue.png)
-        - [rt1-el-cap.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-el-cap.png)
+        - [rt1-el-cap-granite.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-el-cap-granite.png)
         - [rt1-la-silver.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-launch-green.png)
         - [rt1-midnight.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-midnight.png)
+        - [rt1-forest-green.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-forest-green.png)
         - [rt1-compass-yellow.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-compass-yellow.png)
         - [rt1-canyon-red.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-canyon-red.png)
         - [rt1-limestone.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-limestone.png)
