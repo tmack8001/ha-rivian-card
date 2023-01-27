@@ -317,7 +317,7 @@ elements:
         tap_action: none
   - type: conditional
     conditions:
-      - entity: lock.rivian
+      - entity: binary_sensor.rivian_lock_state
         state: unlocked
     elements:
       - type: image
@@ -339,13 +339,13 @@ elements:
         filter: saturate(1)
         tap_action: none
   - type: state-icon
-    entity: lock.rivian
+    entity: binary_sensor.rivian_lock_state
     state_color: true
     style:
       top: 18%
       left: 25%
   - type: state-label
-    entity: lock.rivian
+    entity: binary_sensor.rivian_lock_state
     style:
       top: 23.5%
       left: 25%
