@@ -1,12 +1,11 @@
 type: picture-elements
 image: >-
   https://github.com/tmack8001/ha-rivian-card/blob/main/src/images/r1t/r1t-launch-green.png?raw=true
-  
 elements:
   - type: conditional
     conditions:
       - entity: binary_sensor.rivian_body_closures_frunk_state
-        state: on
+        state: 'on'
     elements:
       - type: image
         entity: binary_sensor.rivian_body_closures_frunk_state
@@ -31,7 +30,7 @@ elements:
   - type: conditional
     conditions:
       - entity: binary_sensor.rivian_body_closures_door_fl_state
-        state: on
+        state: 'on'
     elements:
       - type: image
         image: >-
@@ -54,7 +53,7 @@ elements:
   - type: conditional
     conditions:
       - entity: binary_sensor.rivian_body_closures_door_fr_state
-        state: on
+        state: 'on'
     elements:
       - type: image
         image: >-
@@ -78,7 +77,7 @@ elements:
   - type: conditional
     conditions:
       - entity: binary_sensor.rivian_body_closures_door_rl_state
-        state: on
+        state: 'on'
     elements:
       - type: image
         image: >-
@@ -102,7 +101,7 @@ elements:
   - type: conditional
     conditions:
       - entity: binary_sensor.rivian_body_closures_door_rr_state
-        state: on
+        state: 'on'
     elements:
       - type: image
         image: >-
@@ -126,7 +125,7 @@ elements:
   - type: conditional
     conditions:
       - entity: binary_sensor.rivian_body_closures_sidebin_l_state
-        state: on
+        state: 'on'
     elements:
       - type: image
         image: >-
@@ -150,7 +149,7 @@ elements:
   - type: conditional
     conditions:
       - entity: binary_sensor.rivian_body_closures_sidebin_r_state
-        state: on
+        state: 'on'
     elements:
       - type: image
         image: >-
@@ -174,7 +173,7 @@ elements:
   - type: conditional
     conditions:
       - entity: binary_sensor.rivian_body_closures_front_left_window_state
-        state: on
+        state: 'on'
     elements:
       - type: image
         image: >-
@@ -198,7 +197,7 @@ elements:
   - type: conditional
     conditions:
       - entity: binary_sensor.rivian_body_closures_front_right_window_state
-        state: on
+        state: 'on'
     elements:
       - type: image
         image: >-
@@ -222,7 +221,7 @@ elements:
   - type: conditional
     conditions:
       - entity: binary_sensor.rivian_body_closures_rear_left_window_state
-        state: on
+        state: 'on'
     elements:
       - type: image
         image: >-
@@ -246,7 +245,7 @@ elements:
   - type: conditional
     conditions:
       - entity: binary_sensor.rivian_body_closures_rear_right_window_state
-        state: on
+        state: 'on'
     elements:
       - type: image
         image: >-
@@ -270,7 +269,7 @@ elements:
   - type: conditional
     conditions:
       - entity: binary_sensor.rivian_body_closures_tonneau_state
-        state: on
+        state: 'on'
     elements:
       - type: image
         image: >-
@@ -294,7 +293,7 @@ elements:
   - type: conditional
     conditions:
       - entity: binary_sensor.rivian_body_closures_tailgate_state
-        state: on
+        state: 'on'
     elements:
       - type: image
         image: >-
@@ -370,13 +369,49 @@ elements:
     style:
       top: 81%
       left: 77%
-  - type: state-icon
-    entity: sensor.rivian_energy_storage_charger_adjusted_soc
-    style:
-      top: 75%
-      left: 25%
+  - type: conditional
+    conditions:
+    - entity: binary_sensor.rivian_energy_storage_charger_vehicle_charger_state
+      state: on
+    elements:
+    - type: state-icon
+      icon: mdi:ev-station
+      entity: binary_sensor.rivian_energy_storage_charger_vehicle_charger_state
+      style:
+        top: 75%
+        left: 25%
+  - type: conditional
+    conditions:
+    - entity: binary_sensor.rivian_energy_storage_charger_vehicle_charger_state
+      state: off
+    - entity: binary_sensor.rivian_energy_storage_charger_status_vehicle_charger_status
+      state: off
+    elements:
+    - type: state-icon
+      entity: sensor.rivian_energy_storage_charger_adjusted_soc
+      style:
+        top: 75%
+        left: 25%
+  - type: conditional
+    conditions:
+    - entity: binary_sensor.rivian_energy_storage_charger_vehicle_charger_state
+      state: off
+    - entity: binary_sensor.rivian_energy_storage_charger_status_vehicle_charger_status
+      state: on
+    elements:
+    - type: state-icon
+      icon: mdi:power-plug
+      entity: binary_sensor.rivian_energy_storage_charger_vehicle_charger_state
+      style:
+        top: 75%
+        left: 25%
   - type: state-label
     entity: sensor.rivian_energy_storage_charger_adjusted_soc
     style:
       top: 81%
+      left: 25%
+  - type: state-label
+    entity: sensor.rivian_energy_storage_vehicle_energy_vehicle_range
+    style:
+      top: 85%
       left: 25%
