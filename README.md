@@ -13,6 +13,7 @@ All features of this card are visual alerts in nature. The following list will g
     - Odometer
     - Home | Away
     - State of Charge (SoC)
+    - Plugged In | Unplugged | Charging
 - Window Rolled Down
 - Exterior Door Open
     - front left (US: driver's door; Intl: passenger's door)
@@ -21,7 +22,7 @@ All features of this card are visual alerts in nature. The following list will g
     - rear right
 - Exterior Closure Open Visual
     - tailgate
-    - toneau cover (powered only)
+    - tonneau cover (powered only)
     - frunk
     - gear tunnel (right and left)
 
@@ -29,7 +30,12 @@ All features of this card are visual alerts in nature. The following list will g
 
 ## Installation
 
-1. Copy the contents of [rivian-state-card.yml](https://github.com/tmack8001/ha-rivian-card/blob/main/src/custom-elements/rivian-state-card.yml) into a `picture-elements` lovelace card.
+1. Choose if you want to have additional dependencies on HMAC Frontend components [card_mod](https://github.com/thomasloven/lovelace-card-mod) and [Bar Card](https://github.com/custom-cards/bar-card) (install if desired).
+
+    1a. [no dependencies] Copy the contents of [rivian-state-card.yml](https://github.com/tmack8001/ha-rivian-card/blob/main/src/custom-elements/rivian-state-card.yml) into a `picture-elements` lovelace card.
+
+    1b. [with additional dependencies] Copy the contents of [rivian-state-card-dependencies.yml](https://github.com/tmack8001/ha-rivian-card/blob/main/src/custom-elements/rivian-state-card-dependencies.yml) into a `picture-elements` lovelace card.
+
 2. Modify the base R1T model based on your Rivian color (replace [rt1-launch-green.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-launch-green.png) with [rt1-rivian-blue.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-rivian-blue.png)). 
     - For instance, if you want to have your Home Assistant Rivian model to match your a specific color of your choosing.
     - Base Model Colors Supported and have the following image file name schema `https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-<color-name>.png`
