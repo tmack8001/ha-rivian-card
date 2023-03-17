@@ -30,9 +30,11 @@ All features of this card are visual alerts in nature. The following list will g
 
 ## Installation
 
+*required dependency* on [home-assistant-rivian  v0.7.1](https://github.com/bretterer/home-assistant-rivian/releases/tag/0.7.1) for global lock/unlock state sensor
+
 1. Choose if you want to have additional dependencies on HMAC Frontend components [card_mod](https://github.com/thomasloven/lovelace-card-mod) and [Bar Card](https://github.com/custom-cards/bar-card) (install if desired).
 
-    1a. [no dependencies] Copy the contents of [rivian-state-card.yml](https://github.com/tmack8001/ha-rivian-card/blob/main/src/custom-elements/rivian-state-card.yml) into a `picture-elements` lovelace card.
+    1a. [no dependencies] Copy the contents of [rivian-state-card.yml](https://github.com/tmack8001/ha-rivian-card/blob/main/src/custom-elements/rivian-state-card.yml) into a `picture-elements` lovelace card. Features included in this markup and not the other include: progress bar battery state of charge visual and a pulsating charging icon visual. All other features are same as the other markup
 
     1b. [with additional dependencies] Copy the contents of [rivian-state-card-dependencies.yml](https://github.com/tmack8001/ha-rivian-card/blob/main/src/custom-elements/rivian-state-card-dependencies.yml) into a `picture-elements` lovelace card.
 
