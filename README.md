@@ -8,29 +8,35 @@ All features of this card are visual alerts in nature. The following list will g
 
 - Supported Rivian Build Year Models:
     - R1T 2022/2023
-- Vehicle Status:
+    - R1S 2022/2023 **(not available yet)**
+- Vehicle State (icon and description):
     - Locked | Unlocked
     - Odometer
     - Home | Away
     - State of Charge (SoC)
     - Plugged In | Unplugged | Charging
-- Window Rolled Down
-- Exterior Door Open
-    - front left (US: driver's door; Intl: passenger's door)
-    - front right (US: passenger's door; Intl: driver's door)
-    - rear left
-    - rear right
-- Exterior Closure Open Visual
-    - tailgate
-    - tonneau cover (powered only)
-    - frunk
-    - gear tunnel (right and left)
+- Overlays
+  - Window Rolled Down
+  - Exterior Door Open
+      - front left (US: driver's door; Intl: passenger's door)
+      - front right (US: passenger's door; Intl: driver's door)
+      - rear left
+      - rear right
+  - Exterior Closure Open Visual (not occupancy doors)
+      - tailgate
+      - tonneau cover (powered only)
+      - frunk
+      - gear tunnel (right and left)
+
+**Features which require additional Lovelace Frontend dependencies**
+- Pulsating Charge Status
+- State of Charge Progress Bar
 
 
 
 ## Installation
 
-*required dependency* on [home-assistant-rivian  v0.7.1](https://github.com/bretterer/home-assistant-rivian/releases/tag/0.7.1) for global lock/unlock state sensor
+**required dependency** on [home-assistant-rivian  v0.7.1](https://github.com/bretterer/home-assistant-rivian/releases/tag/0.7.1) for global lock/unlock state sensor
 
 1. Choose if you want to have additional dependencies on HMAC Frontend components [card_mod](https://github.com/thomasloven/lovelace-card-mod) and [Bar Card](https://github.com/custom-cards/bar-card) (install if desired).
 
