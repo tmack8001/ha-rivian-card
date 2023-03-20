@@ -316,8 +316,8 @@ elements:
         tap_action: none
   - type: conditional
     conditions:
-      - entity: lock.rivian
-        state: unlocked
+      - entity: binary_sensor.rivian_locked_state
+        state: 'on'
     elements:
       - type: image
         image: >-
