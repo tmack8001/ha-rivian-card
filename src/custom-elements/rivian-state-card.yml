@@ -317,7 +317,7 @@ elements:
   - type: conditional
     conditions:
       - entity: binary_sensor.rivian_locked_state
-        state: unlocked
+        state: 'on'
     elements:
       - type: image
         image: >-
