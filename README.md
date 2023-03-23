@@ -44,19 +44,19 @@ All features of this card are visual alerts in nature. The following list will g
 
     1b. [with additional dependencies] Copy the contents of [rivian-state-card-dependencies.yml](https://github.com/tmack8001/ha-rivian-card/blob/main/src/custom-elements/rivian-state-card-dependencies.yml) into a `picture-elements` lovelace card. Features included in this markup and not the other include: progress bar battery state of charge visual and a pulsating charging icon visual. All other features are same as the other markup
 
-2. Modify the base R1T model based on your Rivian color (replace [rt1-launch-green.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-launch-green.png) with [rt1-rivian-blue.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-rivian-blue.png)). 
+2. Modify the base R1T model based on your Rivian color (replace [rt1-launch-green.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-launch-green.png) with [rt1-rivian-blue.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-rivian-blue.png)). 
     - For instance, if you want to have your Home Assistant Rivian model to match your a specific color of your choosing.
     - Base Model Colors Supported and have the following image file name schema `https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-<color-name>.png`
-        - [rt1-launch-green.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-launch-green.png)
-        - [rt1-rivian-blue.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-rivian-blue.png)
-        - [rt1-el-cap-granite.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-el-cap-granite.png)
-        - [rt1-la-silver.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-launch-green.png)
-        - [rt1-midnight.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-midnight.png)
-        - [rt1-forest-green.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-forest-green.png)
-        - [rt1-compass-yellow.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-compass-yellow.png)
-        - [rt1-canyon-red.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-canyon-red.png)
-        - [rt1-limestone.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-limestone.png)
-        - [rt1-glacier-white.img](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-glacier-white.png)
+        - [rt1-launch-green.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-launch-green.png)
+        - [rt1-rivian-blue.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-rivian-blue.png)
+        - [rt1-el-cap-granite.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-el-cap-granite.png)
+        - [rt1-la-silver.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-launch-green.png)
+        - [rt1-midnight.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-midnight.png)
+        - [rt1-forest-green.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-forest-green.png)
+        - [rt1-compass-yellow.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-compass-yellow.png)
+        - [rt1-canyon-red.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-canyon-red.png)
+        - [rt1-limestone.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-limestone.png)
+        - [rt1-glacier-white.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-glacier-white.png)
 
 ## Credits and Contributions
 
