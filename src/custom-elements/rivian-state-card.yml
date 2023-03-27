@@ -29,6 +29,21 @@ elements:
         tap_action: none
   - type: conditional
     conditions:
+      - entity: binary_sensor.rivian_energy_storage_charger_status_vehicle_charger_status
+        state: 'on'
+    elements:
+      - type: image
+        entity: binary_sensor.rivian_energy_storage_charger_status_vehicle_charger_status
+        image: >-
+          https://github.com/tmack8001/ha-rivian-card/blob/main/src/images/r1t/r1t-charger-door.svg?raw=true
+        style:
+          top: 50%
+          left: 50%
+          width: 100%
+        filter: saturate(1)
+        tap_action: none
+  - type: conditional
+    conditions:
       - entity: binary_sensor.rivian_body_closures_door_fl_state
         state: 'on'
     elements:

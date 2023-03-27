@@ -22,11 +22,12 @@ All features of this card are visual alerts in nature. The following list will g
       - front right (US: passenger's door; Intl: driver's door)
       - rear left
       - rear right
-  - Exterior Closure Open Visual (not occupancy doors)
+  - Exterior Closure Open Visual (non-occupancy doors)
+      - frunk
+      - charger door (*only while plugged in*)
+      - gear tunnel (right and left)
       - tailgate
       - tonneau cover (powered only)
-      - frunk
-      - gear tunnel (right and left)
 
 **Features which require additional Lovelace Frontend dependencies**
 - Pulsating Charge Status
