@@ -416,3 +416,14 @@ elements:
     style:
       top: 85%
       left: 25%
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.khonsu_wiper_fluid_level
+        state: 'on'
+    elements:
+      - type: state-icon
+        entity: binary_sensor.khonsu_wiper_fluid_level
+        style:
+          top: 28%
+          left: 50%
+
