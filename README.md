@@ -43,7 +43,7 @@ All features of this card are visual alerts in nature. The following list will g
 
     1a. [no dependencies] Copy the contents of [rivian-r1t-state-card.yml](https://github.com/tmack8001/ha-rivian-card/blob/main/src/custom-elements/rivian-r1t-state-card.yml) into a `picture-elements` lovelace card. 
 
-    1b. [with additional dependencies] Copy the contents of [rivian-r1t-state-card.yml](https://github.com/tmack8001/ha-rivian-card/blob/main/src/custom-elements/rivian-r1t-state-card.yml) into a `picture-elements` lovelace card. Features included in this markup and not the other include: progress bar battery state of charge visual and a pulsating charging icon visual. All other features are same as the other markup
+    1b. [with additional dependencies] Copy the contents of [rivian-r1t-state-card-dependencies.yml](https://github.com/tmack8001/ha-rivian-card/blob/main/src/custom-elements/rivian-r1t-state-card-dependencies.yml) (R1T) or [rivian-r1s-state-card-dependencies.yml](https://github.com/tmack8001/ha-rivian-card/blob/main/src/custom-elements/rivian-r1s-state-card-dependencies.yml) (R1S) into a `picture-elements` lovelace card. Features included in this markup and not the other include: progress bar battery state of charge visual and a pulsating charging icon visual. All other features are same as the other markup
 
 2. Modify the base R1T model based on your Rivian color (replace [rt1-launch-green.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-launch-green.png) with [rt1-rivian-blue.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-rivian-blue.png)). 
     - For instance, if you want to have your Home Assistant Rivian model to match your a specific color of your choosing.
@@ -58,6 +58,8 @@ All features of this card are visual alerts in nature. The following list will g
         - [rt1-canyon-red.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-canyon-red.png)
         - [rt1-limestone.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-limestone.png)
         - [rt1-glacier-white.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-glacier-white.png)
+
+3. If you have used the Rivian (Unofficial) addon prior to v0.90, you will have to edit the entity names in the `picture-element` yaml to match the old entity names.  See old and new entity names here: https://github.com/bretterer/home-assistant-rivian/releases/tag/0.9.0.
 
 ## Credits and Contributions
 
