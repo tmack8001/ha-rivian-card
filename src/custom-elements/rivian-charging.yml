@@ -1,0 +1,280 @@
+type: vertical-stack
+cards:
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.r1t_charger_connection
+        state: "on"
+    card:
+      type: picture-elements
+      image: >-
+        https://rivian.com/mobile/static/img/v1/vehicle/r1t/2021/adventure/ext/limestone/20ad1-brit-at/r1t_2021_adventure_ext_limestone_20ad1-brit-at_side-charging_light_large_xxxhdpi.webp
+      card_mod:
+        style:
+          hui-image$: |
+            img {
+              margin: auto;
+              padding: 15% 0;
+            }
+      elements:
+        - type: state-icon
+          entity: sensor.r1t_soc_limit
+          state_color: true
+          style:
+            top: 9%
+            left: 16%
+        - type: state-label
+          entity: sensor.r1t_soc_limit
+          suffix: " limit"
+          style:
+            top: 18%
+            left: 16%
+        - type: state-icon
+          entity: sensor.r1t_charging_time_elapsed
+          icon: mdi:clock-start
+          state_color: true
+          style:
+            top: 9%
+            left: 38%
+        - type: state-label
+          entity: sensor.r1t_charging_time_elapsed
+          suffix: " ago"
+          style:
+            top: 18%
+            left: 38%
+        - type: state-icon
+          entity: sensor.r1t_charging_time_remaining
+          icon: mdi:clock-end
+          state_color: true
+          style:
+            top: 9%
+            left: 62%
+        - type: state-label
+          entity: sensor.r1t_charging_time_remaining
+          suffix: " left"
+          style:
+            top: 18%
+            left: 62%
+        - type: state-icon
+          entity: sensor.r1t_charging_cost
+          state_color: true
+          style:
+            top: 9%
+            left: 84%
+        - type: state-label
+          entity: sensor.r1t_charging_cost
+          style:
+            top: 18%
+            left: 84%
+        - type: conditional
+          conditions:
+            - entity: binary_sensor.r1t_charging_status
+              state: "off"
+          elements:
+            - type: state-icon
+              entity: sensor.r1t_battery_state_of_charge
+              state_color: true
+              style:
+                top: 84%
+                left: 10%
+        - type: conditional
+          conditions:
+            - entity: binary_sensor.r1t_charging_status
+              state: "on"
+          elements:
+            - type: state-icon
+              entity: sensor.r1t_battery_state_of_charge
+              icon: mdi:battery-charging
+              style:
+                top: 84%
+                left: 10%
+          card_mod:
+            style:
+              hui-state-icon-element$state-badge$ha-state-icon$: |
+                :host {
+                  color: var(--paper-item-icon-color);
+                  border-radius: 16px;
+                  box-shadow: 0px 0px 2px #88F1FF;
+                  padding: 2px 0px 5px;
+                  border: 2px solid transparent;
+                  animation: pulsate 2s linear infinite;
+                }
+                @keyframes pulsate {
+                  0% {
+                    color: var(--paper-item-icon-color);
+                    box-shadow: 0 0 0 transparent;
+                    border: 2px solid transparent;
+                  }
+                  50% {
+                    color: #88F1FF;
+                    box-shadow: 0px 0px 8px #88F1FF;
+                    border: 2px solid #88F1FF;
+                  }
+                  100% {
+                    color:  var(--paper-item-icon-color);
+                    box-shadow: 0 0 0 transparent;
+                    border: 2px solid transparent;
+                  }
+                }
+        - type: state-label
+          entity: sensor.r1t_battery_state_of_charge
+          style:
+            top: 93%
+            left: 10%
+        - type: state-icon
+          entity: sensor.r1t_charging_speed
+          state_color: true
+          style:
+            top: 84%
+            left: 30%
+        - type: state-label
+          entity: sensor.r1t_charging_speed
+          style:
+            top: 93%
+            left: 30%
+        - type: state-icon
+          entity: sensor.r1t_charging_rate
+          state_color: true
+          style:
+            top: 84%
+            left: 50%
+        - type: state-label
+          entity: sensor.r1t_charging_rate
+          style:
+            top: 93%
+            left: 50%
+        - type: state-icon
+          entity: sensor.r1t_charging_energy_delivered
+          state_color: true
+          style:
+            top: 84%
+            left: 70%
+        - type: state-label
+          entity: sensor.r1t_charging_energy_delivered
+          style:
+            top: 93%
+            left: 70%
+        - type: state-icon
+          entity: sensor.r1t_charging_range_added
+          state_color: true
+          style:
+            top: 84%
+            left: 90%
+        - type: state-label
+          entity: sensor.r1t_charging_range_added
+          style:
+            top: 93%
+            left: 90%
+  - type: conditional
+    conditions:
+      - entity: binary_sensor.r1t_charger_connection
+        state_not: "on"
+    card:
+      type: picture-elements
+      image: >-
+        https://rivian.com/mobile/static/img/v1/vehicle/r1t/2021/adventure/ext/limestone/20ad1-brit-at/r1t_2021_adventure_ext_limestone_20ad1-brit-at_side_light_large_xxxhdpi.webp
+      card_mod:
+        style:
+          hui-image$: |
+            img {
+              margin: auto;
+              padding: 0.5% 0;
+            }
+      elements:
+        - type: state-icon
+          entity: device_tracker.r1t_location
+          state_color: true
+          style:
+            top: 9%
+            left: 16%
+        - type: state-label
+          entity: device_tracker.r1t_location
+          style:
+            top: 18%
+            left: 16%
+        - type: state-icon
+          entity: binary_sensor.r1t_locked_state
+          state_color: true
+          style:
+            top: 9%
+            left: 38%
+        - type: state-label
+          entity: binary_sensor.r1t_locked_state
+          style:
+            top: 18%
+            left: 38%
+        - type: state-icon
+          entity: binary_sensor.r1t_closure_state
+          state_color: true
+          style:
+            top: 9%
+            left: 62%
+        - type: state-label
+          entity: binary_sensor.r1t_closure_state
+          style:
+            top: 18%
+            left: 62%
+        - type: state-icon
+          entity: sensor.r1t_power_state
+          state_color: true
+          style:
+            top: 9%
+            left: 84%
+        - type: state-label
+          entity: sensor.r1t_power_state
+          style:
+            top: 18%
+            left: 84%
+        - type: state-icon
+          entity: sensor.r1t_battery_state_of_charge
+          style:
+            top: 84%
+            left: 10%
+        - type: state-label
+          entity: sensor.r1t_battery_state_of_charge
+          style:
+            top: 93%
+            left: 10%
+        - type: state-icon
+          entity: sensor.r1t_gear_selector
+          state_color: true
+          style:
+            top: 84%
+            left: 30%
+        - type: state-label
+          entity: sensor.r1t_gear_selector
+          style:
+            top: 93%
+            left: 30%
+        - type: state-icon
+          entity: sensor.r1t_drive_mode
+          state_color: true
+          style:
+            top: 84%
+            left: 50%
+        - type: state-label
+          entity: sensor.r1t_drive_mode
+          style:
+            top: 93%
+            left: 50%
+        - type: state-icon
+          entity: binary_sensor.r1t_in_use_state
+          state_color: true
+          style:
+            top: 84%
+            left: 70%
+        - type: state-label
+          entity: binary_sensor.r1t_in_use_state
+          style:
+            top: 93%
+            left: 70%
+        - type: state-icon
+          entity: sensor.r1t_estimated_vehicle_range
+          state_color: true
+          style:
+            top: 84%
+            left: 90%
+        - type: state-label
+          entity: sensor.r1t_estimated_vehicle_range
+          style:
+            top: 93%
+            left: 90%
