@@ -2,7 +2,6 @@
 
 A custom `picture-elements` YAML configuration with custom image layers to match the build of the Rivian vehicles.
 
-
 ## Features
 All features of this card are visual alerts in nature. The following list will go through what to expect from this HA card.
 
@@ -37,15 +36,13 @@ All features of this card are visual alerts in nature. The following list will g
 - Pulsating Charge Status
 - State of Charge Progress Bar
 
-
-
 ## Installation
 
 **required minimum dependency** on [home-assistant-rivian v0.7.1](https://github.com/bretterer/home-assistant-rivian/releases/tag/0.7.1) for global lock/unlock state sensor
 
 1. Choose if you want to have additional dependencies on HMAC Frontend components [card_mod](https://github.com/thomasloven/lovelace-card-mod) and [Bar Card](https://github.com/custom-cards/bar-card) (install if desired).
 
-    1a. [no dependencies] Copy the contents of [rivian-r1t-state-card.yml](https://github.com/tmack8001/ha-rivian-card/blob/main/src/custom-elements/rivian-r1t-state-card.yml) into a `picture-elements` lovelace card. 
+    1a. [no dependencies] Copy the contents of [rivian-r1t-state-card.yml](https://github.com/tmack8001/ha-rivian-card/blob/main/src/custom-elements/rivian-r1t-state-card.yml) into a `picture-elements` lovelace card.
 
     1b. [with additional dependencies] Copy the contents of [rivian-r1t-state-card-dependencies.yml](https://github.com/tmack8001/ha-rivian-card/blob/main/src/custom-elements/rivian-r1t-state-card-dependencies.yml) (R1T) or [rivian-r1s-state-card-dependencies.yml](https://github.com/tmack8001/ha-rivian-card/blob/main/src/custom-elements/rivian-r1s-state-card-dependencies.yml) (R1S) into a `picture-elements` lovelace card. Features included in this markup and not the other include: progress bar battery state of charge visual and a pulsating charging icon visual. All other features are same as the other markup
 
@@ -65,11 +62,15 @@ All features of this card are visual alerts in nature. The following list will g
 
 3. (optional: for `rivian-charging-card`) To change between R1T and R1S models perform a find/replace on `r1t` => `r1s`. Old and new entity names are https://github.com/bretterer/home-assistant-rivian/releases/tag/0.9.0 and for older installs similar to no. 3 above some replacements may be required.
 
-4. If you have used the Rivian (Unofficial) addon prior to v0.9.x, you will have to edit the entity names in the `picture-element` yaml to match the old entity names.  See old and new entity names here: https://github.com/bretterer/home-assistant-rivian/releases/tag/0.9.0.
+### Update Entity Naming
 
-### Installation
+Note that the entity names used in this card's repository is setup to assume a brand new install of the [home-assistant-rivian integration](https://github.com/bretterer/home-assistant-rivian).
 
-Note that the entity names used in this card's repository is setup to assume a brand new install of the [home-assistant-rivian integration](https://github.com/bretterer/home-assistant-rivian). In doing so some older users of this Home Assistant integration aren't going to work out of the box, in addition to that the base entity names used assume no naming of your vehicle (added by Rivian in OTA release [2023-14-00](https://rivian.software/2023-14-00/)). With this vehicle naming feature entity names within HomeAssistant will default to a this structure as outlined below:
+In doing so some older users of this Home Assistant integration aren't going to work out of the box. If you have used the Rivian (Unofficial) addon prior to v0.9.x, you will have to edit the entity names in the `picture-element` yaml to match the old entity names.  See old and new entity names here: https://github.com/bretterer/home-assistant-rivian/releases/tag/0.9.0.
+
+In addition to the above the base entity names used also assume no naming of the vehicle (added by Rivian in OTA release [2023-14-00](https://rivian.software/2023-14-00/) and support for this was added in the HA integration [version 0.10.0](https://github.com/bretterer/home-assistant-rivian/releases/tag/0.10.0)). With this vehicle naming feature entity names within HomeAssistant will now default to be named after your vehicle making way for multiple vehicles (yay ultimate adventurers) as well as making it easier to find sensors in type ahead.
+
+Entity naming structure is outlined below:
 
 ```
 binary_sensor.<prefix>_<sensor_name>
@@ -79,8 +80,6 @@ sensor.<prefix>_<sensor_name>
 where `<prefix>` by default and no vehicle naming would map to `r1t` and `r1s` respectfully, though if named these will default to your vehicle's set name according to Rivian's GetVehicle API response
 
 `<sensor_name>` maps to the name of a specific sensor where some are documented in the [home-assistant-rivian README.md](https://github.com/bretterer/home-assistant-rivian#available-sensors)
-
-Older naming conventions are documented in an entity mapping table documented in the [home-assistant-rivian old-sensors](https://github.com/bretterer/home-assistant-rivian/blob/main/old-sensors)
 
 ## Credits and Contributions
 
