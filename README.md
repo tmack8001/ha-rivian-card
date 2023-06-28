@@ -6,9 +6,12 @@ A custom `picture-elements` YAML configuration with custom image layers to match
 ## Features
 All features of this card are visual alerts in nature. The following list will go through what to expect from this HA card.
 
+- Card Styles
+  - Vehicle Door/Window Overview
+  - Charging Session and Overview
 - Supported Rivian Build Year Models:
     - R1T 2022/2023
-    - R1S 2022/2023 **(limited support - lack of specific overlays for tailgate/liftgate conditions)**
+    - R1S 2022/2023
 - Vehicle State (icon and description):
     - Locked | Unlocked
     - Odometer
@@ -23,11 +26,12 @@ All features of this card are visual alerts in nature. The following list will g
       - rear left
       - rear right
   - Exterior Closure Open Visual (non-occupancy doors)
-      - frunk
+      - front trunk (eg. frunk)
       - charger door (*only while plugged in*)
       - gear tunnel (right and left)
       - tailgate
-      - tonneau cover (powered only)
+      - liftgate (r1s only)
+      - tonneau cover (r1t - powered only)
 
 **Features which require additional Lovelace Frontend dependencies**
 - Pulsating Charge Status
