@@ -49,7 +49,7 @@ All features of this card are visual alerts in nature. The following list will g
 
     1b. [with additional dependencies] Copy the contents of [rivian-r1t-state-card-dependencies.yml](https://github.com/tmack8001/ha-rivian-card/blob/main/src/custom-elements/rivian-r1t-state-card-dependencies.yml) (R1T) or [rivian-r1s-state-card-dependencies.yml](https://github.com/tmack8001/ha-rivian-card/blob/main/src/custom-elements/rivian-r1s-state-card-dependencies.yml) (R1S) into a `picture-elements` lovelace card. Features included in this markup and not the other include: progress bar battery state of charge visual and a pulsating charging icon visual. All other features are same as the other markup
 
-2. Modify the base R1T model based on your Rivian color (replace [rt1-launch-green.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-launch-green.png) with [rt1-rivian-blue.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-rivian-blue.png)). 
+2. Modify the base R1T model based on your Rivian color (replace [rt1-launch-green.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-launch-green.png) with [rt1-rivian-blue.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-rivian-blue.png)).
     - For instance, if you want to have your Home Assistant Rivian model to match your a specific color of your choosing.
     - Base Model Colors Supported and have the following image file name schema `https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-<color-name>.png`
         - [rt1-launch-green.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-launch-green.png)
@@ -63,8 +63,27 @@ All features of this card are visual alerts in nature. The following list will g
         - [rt1-limestone.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-limestone.png)
         - [rt1-glacier-white.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/r1t-glacier-white.png)
 
-3. If you have used the Rivian (Unofficial) addon prior to v0.90, you will have to edit the entity names in the `picture-element` yaml to match the old entity names.  See old and new entity names here: https://github.com/bretterer/home-assistant-rivian/releases/tag/0.9.0.
+3. (optional: for `rivian-charging-card`) To change between R1T and R1S models perform a find/replace on `r1t` => `r1s`. Old and new entity names are https://github.com/bretterer/home-assistant-rivian/releases/tag/0.9.0 and for older installs similar to no. 3 above some replacements may be required.
+
+4. If you have used the Rivian (Unofficial) addon prior to v0.9.x, you will have to edit the entity names in the `picture-element` yaml to match the old entity names.  See old and new entity names here: https://github.com/bretterer/home-assistant-rivian/releases/tag/0.9.0.
+
+### Installation
+
+Note that the entity names used in this card's repository is setup to assume a brand new install of the [home-assistant-rivian integration](https://github.com/bretterer/home-assistant-rivian). In doing so some older users of this Home Assistant integration aren't going to work out of the box, in addition to that the base entity names used assume no naming of your vehicle (added by Rivian in OTA release [2023-14-00](https://rivian.software/2023-14-00/)). With this vehicle naming feature entity names within HomeAssistant will default to a this structure as outlined below:
+
+```
+binary_sensor.<prefix>_<sensor_name>
+sensor.<prefix>_<sensor_name>
+```
+
+where `<prefix>` by default and no vehicle naming would map to `r1t` and `r1s` respectfully, though if named these will default to your vehicle's set name according to Rivian's GetVehicle API response
+
+`<sensor_name>` maps to the name of a specific sensor where some are documented in the [home-assistant-rivian README.md](https://github.com/bretterer/home-assistant-rivian#available-sensors)
+
+Older naming conventions are documented in an entity mapping table documented in the [home-assistant-rivian old-sensors](https://github.com/bretterer/home-assistant-rivian/blob/main/old-sensors)
 
 ## Credits and Contributions
 
 Credit to [genosonic](https://community.home-assistant.io/u/genosonic) for the initially provided Rivian [images](https://community.home-assistant.io/t/generic-vehicle-card/397844/28) and [card concept](https://community.home-assistant.io/t/generic-vehicle-card/397844/5).
+
+Credit to [natespencer](https://github.com/tmack8001/ha-rivian-card/commits?author=natekspencer) for their contributions to the rivian-charging-card.yml as well as large changes to the [home-assistant-rivian integration](https://github.com/bretterer/home-assistant-rivian).

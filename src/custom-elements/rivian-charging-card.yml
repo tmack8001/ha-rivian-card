@@ -7,7 +7,7 @@ cards:
     card:
       type: picture-elements
       image: >-
-        https://rivian.com/mobile/static/img/v1/vehicle/r1t/2021/adventure/ext/limestone/20ad1-brit-at/r1t_2021_adventure_ext_limestone_20ad1-brit-at_side-charging_light_large_xxxhdpi.webp
+        https://github.com/tmack8001/ha-rivian-card/blob/main/src/images/r1t/side_charging/r1t-launch-green.png?raw=true
       card_mod:
         style:
           hui-image$: |
