@@ -1,6 +1,15 @@
 type: picture-elements
 image: >-
-  https://github.com/tmack8001/ha-rivian-card/blob/main/src/images/r1t/r1t-launch-green.png?raw=true
+  https://github.com/tmack8001/ha-rivian-card/blob/main/src/images/r1t/overhead/dark/r1t-launch-green.png?raw=true
+card_mod:
+  style:
+    hui-image$: |
+      img {
+        max-width: 39%;
+        margin: auto;
+        padding-right: 1%;
+        padding-top: 4%;
+      }
 elements:
   - type: conditional
     conditions:
