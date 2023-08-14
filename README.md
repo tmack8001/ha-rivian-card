@@ -36,6 +36,39 @@ All features of this card are visual alerts in nature. The following list will g
 - Pulsating Charge Status
 - State of Charge Progress Bar
 
+## Examples
+
+### Vehicle State Card (Overhead)
+
+![Unlocked R1S - Card with Dependencies](.github/images/unlocked-r1s-dependencies.png?raw=true)
+- red circle and red outline indicates the vehicle is unlocked (insecure)
+- icons and status indicators (top left to bottom right):
+  - locked state
+  - away from home (device tracker)
+  - current state of charge and predicted mileage (flashes during charge session)
+  - current odometer reading
+
+![Unlocked R1T - Card with Dependencies](.github/images/unlocked-r1t-dependencies.png?raw=true)
+- red circle and red outline indicates the vehicle is unlocked (insecure)
+- icons and status indicators (top left to bottom right):
+  - locked state
+  - at home (device tracker)
+  - current state of charge and predicted mileage
+  - current odometer reading
+
+
+### Vehicle Charging State Card (side_charging_)
+
+![R1T - Charging Session](.github/images/plugged-in-charging-r1t.png?raw=true)
+
+![R1T - Not Charging](.github/images/not-plugged-in-r1t.png?raw=true)
+
+![R1S - Charging Session](.github/images/plugged-in-charging-r1s.png?raw=true)
+
+![R1S - Not Charging](.github/images/not-plugged-in-r1s.png?raw=true)
+
+
+
 ## Installation
 
 **required minimum dependency** on [home-assistant-rivian v0.7.1](https://github.com/bretterer/home-assistant-rivian/releases/tag/0.7.1) for global lock/unlock state sensor
