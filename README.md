@@ -79,9 +79,9 @@ All features of this card are visual alerts in nature. The following list will g
 
     1b. [with additional dependencies] Copy the contents of [rivian-r1t-state-card-dependencies.yml](https://github.com/tmack8001/ha-rivian-card/blob/main/src/custom-elements/rivian-r1t-state-card-dependencies.yml) (R1T) or [rivian-r1s-state-card-dependencies.yml](https://github.com/tmack8001/ha-rivian-card/blob/main/src/custom-elements/rivian-r1s-state-card-dependencies.yml) (R1S) into a `picture-elements` lovelace card. Features included in this markup and not the other include: progress bar battery state of charge visual and a pulsating charging icon visual. All other features are same as the other markup
 
-2. Modify the base R1T model based on your Rivian color (replace [rt1-launch-green.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/overhead/dark/r1t-launch-green.png) with [rt1-rivian-blue.png](https://github.com/tmack8001/ha-rivian-card/blob/main/images/r1t/overhead/dark/r1t-rivian-blue.png)).
+2. Modify the base R1T model based on your Rivian color (replace [rt1-launch-green.png](https://github.com/tmack8001/ha-rivian-card/blob/main/src/images/r1t/overhead/dark/r1t-launch-green.png) with [rt1-rivian-blue.png](https://github.com/tmack8001/ha-rivian-card/blob/main/src/images/r1t/overhead/dark/r1t-rivian-blue.png)).
     - For instance, if you want to have your Home Assistant Rivian model to match your a specific color of your choosing.
-    - Base Model Colors Supported and have the following image file name schema `https://github.com/tmack8001/ha-rivian-card/blob/main/images/<model>/<view_angle>/<shading>/<model>-<color-name>.png`
+    - Base Model Colors Supported and have the following image file name schema `https://github.com/tmack8001/ha-rivian-card/blob/main/src/images/<model>/<view_angle>/<shading>/<model>-<color-name>.png`
         - Example Dark R1T Images (overhead)
             - [rt1-launch-green.png](https://github.com/tmack8001/ha-rivian-card/blob/main/src/images/r1t/overhead/dark/r1t-launch-green.png)
             - [rt1-rivian-blue.png](https://github.com/tmack8001/ha-rivian-card/blob/main/src/images/r1t/overhead/dark/r1t-rivian-blue.png)
