@@ -2,7 +2,7 @@ type: vertical-stack
 cards:
   - type: conditional
     conditions:
-      - entity: binary_sensor.r1t_charger_connection
+      - entity: binary_sensor.<vehicle_name__or__r1t__or__r1s>_charger_connection
         state: "on"
     card:
       type: picture-elements
@@ -17,72 +17,72 @@ cards:
             }
       elements:
         - type: state-icon
-          entity: sensor.r1t_soc_limit
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_soc_limit
           state_color: true
           style:
             top: 9%
             left: 16%
         - type: state-label
-          entity: sensor.r1t_soc_limit
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_soc_limit
           suffix: " limit"
           style:
             top: 18%
             left: 16%
         - type: state-icon
-          entity: sensor.r1t_charging_time_elapsed
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_charging_time_elapsed
           icon: mdi:clock-start
           state_color: true
           style:
             top: 9%
             left: 38%
         - type: state-label
-          entity: sensor.r1t_charging_time_elapsed
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_charging_time_elapsed
           suffix: " ago"
           style:
             top: 18%
             left: 38%
         - type: state-icon
-          entity: sensor.r1t_charging_time_remaining
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_charging_time_remaining
           icon: mdi:clock-end
           state_color: true
           style:
             top: 9%
             left: 62%
         - type: state-label
-          entity: sensor.r1t_charging_time_remaining
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_charging_time_remaining
           suffix: " left"
           style:
             top: 18%
             left: 62%
         - type: state-icon
-          entity: sensor.r1t_charging_cost
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_charging_cost
           state_color: true
           style:
             top: 9%
             left: 84%
         - type: state-label
-          entity: sensor.r1t_charging_cost
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_charging_cost
           style:
             top: 18%
             left: 84%
         - type: conditional
           conditions:
-            - entity: binary_sensor.r1t_charging_status
+            - entity: binary_sensor.<vehicle_name__or__r1t__or__r1s>_charging_status
               state: "off"
           elements:
             - type: state-icon
-              entity: sensor.r1t_battery_state_of_charge
+              entity: sensor.<vehicle_name__or__r1t__or__r1s>_battery_state_of_charge
               state_color: true
               style:
                 top: 84%
                 left: 10%
         - type: conditional
           conditions:
-            - entity: binary_sensor.r1t_charging_status
+            - entity: binary_sensor.<vehicle_name__or__r1t__or__r1s>_charging_status
               state: "on"
           elements:
             - type: state-icon
-              entity: sensor.r1t_battery_state_of_charge
+              entity: sensor.<vehicle_name__or__r1t__or__r1s>_battery_state_of_charge
               icon: mdi:battery-charging
               style:
                 top: 84%
@@ -116,57 +116,57 @@ cards:
                   }
                 }
         - type: state-label
-          entity: sensor.r1t_battery_state_of_charge
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_battery_state_of_charge
           style:
             top: 93%
             left: 10%
         - type: state-icon
-          entity: sensor.r1t_charging_speed
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_charging_speed
           state_color: true
           style:
             top: 84%
             left: 30%
         - type: state-label
-          entity: sensor.r1t_charging_speed
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_charging_speed
           style:
             top: 93%
             left: 30%
         - type: state-icon
-          entity: sensor.r1t_charging_rate
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_charging_rate
           state_color: true
           style:
             top: 84%
             left: 50%
         - type: state-label
-          entity: sensor.r1t_charging_rate
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_charging_rate
           style:
             top: 93%
             left: 50%
         - type: state-icon
-          entity: sensor.r1t_charging_energy_delivered
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_charging_energy_delivered
           state_color: true
           style:
             top: 84%
             left: 70%
         - type: state-label
-          entity: sensor.r1t_charging_energy_delivered
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_charging_energy_delivered
           style:
             top: 93%
             left: 70%
         - type: state-icon
-          entity: sensor.r1t_charging_range_added
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_charging_range_added
           state_color: true
           style:
             top: 84%
             left: 90%
         - type: state-label
-          entity: sensor.r1t_charging_range_added
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_charging_range_added
           style:
             top: 93%
             left: 90%
   - type: conditional
     conditions:
-      - entity: binary_sensor.r1t_charger_connection
+      - entity: binary_sensor.<vehicle_name__or__r1t__or__r1s>_charger_connection
         state_not: "on"
     card:
       type: picture-elements
@@ -181,100 +181,100 @@ cards:
             }
       elements:
         - type: state-icon
-          entity: device_tracker.r1t_location
+          entity: device_tracker.<vehicle_name__or__r1t__or__r1s>_location
           state_color: true
           style:
             top: 9%
             left: 16%
         - type: state-label
-          entity: device_tracker.r1t_location
+          entity: device_tracker.<vehicle_name__or__r1t__or__r1s>_location
           style:
             top: 18%
             left: 16%
         - type: state-icon
-          entity: binary_sensor.r1t_locked_state
+          entity: binary_sensor.<vehicle_name__or__r1t__or__r1s>_locked_state
           state_color: true
           style:
             top: 9%
             left: 38%
         - type: state-label
-          entity: binary_sensor.r1t_locked_state
+          entity: binary_sensor.<vehicle_name__or__r1t__or__r1s>_locked_state
           style:
             top: 18%
             left: 38%
         - type: state-icon
-          entity: binary_sensor.r1t_closure_state
+          entity: binary_sensor.<vehicle_name__or__r1t__or__r1s>_closure_state
           state_color: true
           style:
             top: 9%
             left: 62%
         - type: state-label
-          entity: binary_sensor.r1t_closure_state
+          entity: binary_sensor.<vehicle_name__or__r1t__or__r1s>_closure_state
           style:
             top: 18%
             left: 62%
         - type: state-icon
-          entity: sensor.r1t_power_state
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_power_state
           state_color: true
           style:
             top: 9%
             left: 84%
         - type: state-label
-          entity: sensor.r1t_power_state
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_power_state
           style:
             top: 18%
             left: 84%
         - type: state-icon
-          entity: sensor.r1t_battery_state_of_charge
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_battery_state_of_charge
           style:
             top: 84%
             left: 10%
         - type: state-label
-          entity: sensor.r1t_battery_state_of_charge
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_battery_state_of_charge
           style:
             top: 93%
             left: 10%
         - type: state-icon
-          entity: sensor.r1t_gear_selector
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_gear_selector
           state_color: true
           style:
             top: 84%
             left: 30%
         - type: state-label
-          entity: sensor.r1t_gear_selector
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_gear_selector
           style:
             top: 93%
             left: 30%
         - type: state-icon
-          entity: sensor.r1t_drive_mode
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_drive_mode
           state_color: true
           style:
             top: 84%
             left: 50%
         - type: state-label
-          entity: sensor.r1t_drive_mode
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_drive_mode
           style:
             top: 93%
             left: 50%
         - type: state-icon
-          entity: binary_sensor.r1t_in_use_state
+          entity: binary_sensor.<vehicle_name__or__r1t__or__r1s>_in_use_state
           state_color: true
           style:
             top: 84%
             left: 70%
         - type: state-label
-          entity: binary_sensor.r1t_in_use_state
+          entity: binary_sensor.<vehicle_name__or__r1t__or__r1s>_in_use_state
           style:
             top: 93%
             left: 70%
         - type: state-icon
-          entity: sensor.r1t_estimated_vehicle_range
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_estimated_vehicle_range
           state_color: true
           style:
             top: 84%
             left: 90%
         - type: state-label
-          entity: sensor.r1t_estimated_vehicle_range
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_estimated_vehicle_range
           style:
             top: 93%
             left: 90%

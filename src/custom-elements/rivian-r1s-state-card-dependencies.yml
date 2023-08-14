@@ -12,7 +12,7 @@ card_mod:
 elements:
   - type: conditional
     conditions:
-      - entity: binary_sensor.<vehicle_name__or__rivian_r1s>_front_trunk
+      - entity: binary_sensor.<vehicle_name__or__r1s>_front_trunk
         state: 'on'
     elements:
       - type: image
@@ -35,7 +35,7 @@ elements:
         tap_action: none
   - type: conditional
     conditions:
-      - entity: binary_sensor.<vehicle_name__or__rivian_r1s>_charging_status
+      - entity: binary_sensor.<vehicle_name__or__r1s>_charging_status
         state: 'on'
     elements:
       - type: image
@@ -49,7 +49,7 @@ elements:
         tap_action: none
   - type: conditional
     conditions:
-      - entity: binary_sensor.<vehicle_name__or__rivian_r1s>_door_front_left
+      - entity: binary_sensor.<vehicle_name__or__r1s>_door_front_left
         state: 'on'
     elements:
       - type: image
@@ -72,7 +72,7 @@ elements:
         tap_action: none
   - type: conditional
     conditions:
-      - entity: binary_sensor.<vehicle_name__or__rivian_r1s>_door_front_right
+      - entity: binary_sensor.<vehicle_name__or__r1s>_door_front_right
         state: 'on'
     elements:
       - type: image
@@ -95,7 +95,7 @@ elements:
         tap_action: none
   - type: conditional
     conditions:
-      - entity: binary_sensor.<vehicle_name__or__rivian_r1s>_door_rear_left
+      - entity: binary_sensor.<vehicle_name__or__r1s>_door_rear_left
         state: 'on'
     elements:
       - type: image
@@ -118,7 +118,7 @@ elements:
         tap_action: none
   - type: conditional
     conditions:
-      - entity: binary_sensor.<vehicle_name__or__rivian_r1s>_door_rear_right
+      - entity: binary_sensor.<vehicle_name__or__r1s>_door_rear_right
         state: 'on'
     elements:
       - type: image
@@ -141,7 +141,7 @@ elements:
         tap_action: none
   - type: conditional
     conditions:
-      - entity: binary_sensor.<vehicle_name__or__rivian_r1s>_window_front_left
+      - entity: binary_sensor.<vehicle_name__or__r1s>_window_front_left
         state: 'on'
     elements:
       - type: image
@@ -164,7 +164,7 @@ elements:
         tap_action: none
   - type: conditional
     conditions:
-      - entity: binary_sensor.<vehicle_name__or__rivian_r1s>_window_front_right
+      - entity: binary_sensor.<vehicle_name__or__r1s>_window_front_right
         state: 'on'
     elements:
       - type: image
@@ -187,7 +187,7 @@ elements:
         tap_action: none
   - type: conditional
     conditions:
-      - entity: binary_sensor.<vehicle_name__or__rivian_r1s>_window_rear_left
+      - entity: binary_sensor.<vehicle_name__or__r1s>_window_rear_left
         state: 'on'
     elements:
       - type: image
@@ -210,7 +210,7 @@ elements:
         tap_action: none
   - type: conditional
     conditions:
-      - entity: binary_sensor.<vehicle_name__or__rivian_r1s>_window_rear_right
+      - entity: binary_sensor.<vehicle_name__or__r1s>_window_rear_right
         state: 'on'
     elements:
       - type: image
@@ -233,7 +233,7 @@ elements:
         tap_action: none
   - type: conditional
     conditions:
-      - entity: binary_sensor.<vehicle_name__or__rivian_r1s>_liftgate
+      - entity: binary_sensor.<vehicle_name__or__r1s>_liftgate
         state: 'on'
     elements:
       - type: image
@@ -256,7 +256,7 @@ elements:
         tap_action: none
   - type: conditional
     conditions:
-      - entity: binary_sensor.<vehicle_name__or__rivian_r1s>_tailgate
+      - entity: binary_sensor.<vehicle_name__or__r1s>_tailgate
         state: 'on'
     elements:
       - type: image
@@ -279,7 +279,7 @@ elements:
         tap_action: none
   - type: conditional
     conditions:
-      - entity: binary_sensor.<vehicle_name__or__rivian_r1s>_locked_state
+      - entity: binary_sensor.<vehicle_name__or__r1s>_locked_state
         state: 'on'
     elements:
       - type: image
@@ -301,85 +301,85 @@ elements:
         filter: saturate(1)
         tap_action: none
   - type: state-icon
-    entity: binary_sensor.<vehicle_name__or__rivian_r1s>_locked_state
+    entity: binary_sensor.<vehicle_name__or__r1s>_locked_state
     state_color: true
     style:
       top: 18%
       left: 25%
   - type: state-label
-    entity: binary_sensor.<vehicle_name__or__rivian_r1s>_locked_state
+    entity: binary_sensor.<vehicle_name__or__r1s>_locked_state
     style:
       top: 23.5%
       left: 25%
   - type: state-icon
-    entity: device_tracker.<vehicle_name__or__rivian_r1s>_location
+    entity: device_tracker.<vehicle_name__or__r1s>_location
     state_color: true
     style:
       top: 18%
       left: 77%
   - type: state-label
-    entity: device_tracker.<vehicle_name__or__rivian_r1s>_location
+    entity: device_tracker.<vehicle_name__or__r1s>_location
     style:
       top: 23.5%
       left: 77%
   - type: state-icon
-    entity: sensor.<vehicle_name__or__rivian_r1s>_odometer
+    entity: sensor.<vehicle_name__or__r1s>_odometer
     style:
       top: 75%
       left: 77%
   - type: state-label
-    entity: sensor.<vehicle_name__or__rivian_r1s>_odometer
+    entity: sensor.<vehicle_name__or__r1s>_odometer
     style:
       top: 81%
       left: 77%
   - type: conditional
     conditions:
-      - entity: binary_sensor.<vehicle_name__or__rivian_r1s>_charger_connection
+      - entity: binary_sensor.<vehicle_name__or__r1s>_charger_connection
         state: 'on'
     elements:
       - type: state-icon
         icon: mdi:ev-station
-        entity: binary_sensor.<vehicle_name__or__rivian_r1s>_charger_connection
+        entity: binary_sensor.<vehicle_name__or__r1s>_charger_connection
         style:
           top: 75%
           left: 25%
   - type: conditional
     conditions:
-      - entity: binary_sensor.<vehicle_name__or__rivian_r1s>_charger_connection
+      - entity: binary_sensor.<vehicle_name__or__r1s>_charger_connection
         state: 'off'
-      - entity: binary_sensor.<vehicle_name__or__rivian_r1s>_charging_status
+      - entity: binary_sensor.<vehicle_name__or__r1s>_charging_status
         state: 'off'
     elements:
       - type: state-icon
-        entity: sensor.<vehicle_name__or__rivian_r1s>_battery_state_of_charge
+        entity: sensor.<vehicle_name__or__r1s>_battery_state_of_charge
         style:
           top: 75%
           left: 25%
   - type: conditional
     conditions:
-      - entity: binary_sensor.<vehicle_name__or__rivian_r1s>_charger_connection
+      - entity: binary_sensor.<vehicle_name__or__r1s>_charger_connection
         state: 'off'
-      - entity: binary_sensor.<vehicle_name__or__rivian_r1s>_charging_status
+      - entity: binary_sensor.<vehicle_name__or__r1s>_charging_status
         state: 'on'
     elements:
       - type: state-icon
         icon: mdi:power-plug
-        entity: binary_sensor.<vehicle_name__or__rivian_r1s>_charger_connection
+        entity: binary_sensor.<vehicle_name__or__r1s>_charger_connection
         style:
           top: 75%
           left: 25%
   - type: state-label
-    entity: sensor.<vehicle_name__or__rivian_r1s>_battery_state_of_charge
+    entity: sensor.<vehicle_name__or__r1s>_battery_state_of_charge
     style:
       top: 81%
       left: 25%
   - type: state-label
-    entity: sensor.<vehicle_name__or__rivian_r1s>_estimated_vehicle_range
+    entity: sensor.<vehicle_name__or__r1s>_estimated_vehicle_range
     style:
       top: 85%
       left: 25%
   - type: custom:bar-card
-    entity: sensor.<vehicle_name__or__rivian_r1s>_battery_state_of_charge
+    entity: sensor.<vehicle_name__or__r1s>_battery_state_of_charge
     positions:
       icon: 'off'
       minmax: 'off'
