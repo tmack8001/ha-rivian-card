@@ -6,8 +6,7 @@ cards:
         state: "on"
     card:
       type: picture-elements
-      image: >-
-        https://github.com/tmack8001/ha-rivian-card/blob/main/src/images/r1t/side_charging/dark/r1t-launch-green.png?raw=true
+      image_entity: image.<vehicle_name__or__r1t__or__r1s>_side_dark
       card_mod:
         style:
           hui-image$: |
@@ -17,13 +16,13 @@ cards:
             }
       elements:
         - type: state-icon
-          entity: sensor.<vehicle_name__or__r1t__or__r1s>_soc_limit
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_battery_state_of_charge_limit
           state_color: true
           style:
             top: 9%
             left: 16%
         - type: state-label
-          entity: sensor.<vehicle_name__or__r1t__or__r1s>_soc_limit
+          entity: sensor.<vehicle_name__or__r1t__or__r1s>_battery_state_of_charge_limit
           suffix: " limit"
           style:
             top: 18%
@@ -170,8 +169,7 @@ cards:
         state_not: "on"
     card:
       type: picture-elements
-      image: >-
-        https://github.com/tmack8001/ha-rivian-card/blob/main/src/images/r1t/side_charging/dark/r1t-launch-green.png?raw=true
+      image_entity: image.<vehicle_name__or__r1t__or__r1s>_side_charging_dark
       card_mod:
         style:
           hui-image$: |
