@@ -465,22 +465,23 @@ elements:
     max: 100
     width: 70px
     height: 20px
-    style: |
-      :host {
-        top: 81%;
-        left: 25%;
-      }
-      .card-content {
-        padding: 0 !important;
-      }
-      bar-card-card {
-        border-radius: 10px;
-        height: 14px;
-        overflow: hidden;
-      }
-      bar-card-value {
-        margin: auto
-      }
+    card_mod:
+      style: |
+        :host {
+          top: 81%;
+          left: 25%;
+        }
+        .card-content {
+          padding: 0 !important;
+        }
+        bar-card-card {
+          border-radius: 10px;
+          height: 14px;
+          overflow: hidden;
+        }
+        bar-card-value {
+          margin: auto
+        }
   - type: conditional
     conditions:
       - entity: binary_sensor.<vehicle_name__or__r1t>_wiper_fluid_level

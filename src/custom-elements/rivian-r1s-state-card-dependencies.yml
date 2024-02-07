@@ -390,19 +390,20 @@ elements:
     max: 100
     width: 70px
     height: 8px
-    style: |
-      .card-content {
-        padding:0 !important;
-        background-color: transparent
-        border: 0px solid transparent;
-        border-color: transparent;
-      }
-      bar-card-card {
-        border-radius: 4px;
-        height:8px;
-        overflow: hidden;
-      }
-      :host {
-        top: 89%;
-        left: 25%;
-      }
+    card_mod:
+      style: |
+        .card-content {
+          padding:0 !important;
+          background-color: transparent
+          border: 0px solid transparent;
+          border-color: transparent;
+        }
+        bar-card-card {
+          border-radius: 4px;
+          height:8px;
+          overflow: hidden;
+        }
+        :host {
+          top: 89%;
+          left: 25%;
+        }
